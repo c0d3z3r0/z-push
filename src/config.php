@@ -48,7 +48,8 @@
     define('TIMEZONE', '');
 
     // Defines the base path on the server
-    define('BASE_PATH', dirname($_SERVER['SCRIPT_FILENAME']). '/');
+    if(!defined('BASE_PATH'))
+        define('BASE_PATH', dirname($_SERVER['SCRIPT_FILENAME']). '/');
 
     // Try to set unlimited timeout
     define('SCRIPT_TIMEOUT', 0);

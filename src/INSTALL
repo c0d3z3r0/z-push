@@ -132,6 +132,9 @@ Another possibility is to add this line to z-push.conf file inside the directory
 which contents are automatically processed during the webserver start (by
 default it is conf.d inside the /etc/apache2 or /etc/httpd depending on your
 distribution).
+It is good practice to have everything that should not be publicly accessible
+outside the root directory. To accomplish that set the root directory in your
+webserver configuration to the public directory e.g. /usr/share/z-push/public.
 
 You have to reload your webserver after making these configurations.
 
